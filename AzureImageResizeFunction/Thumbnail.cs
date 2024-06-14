@@ -70,7 +70,7 @@ namespace AzureImageResizeFunction
                 using var image = SixLabors.ImageSharp.Image.Load(stream);
 
                 // Compression quality (0-100, where 100 is best quality)
-                int compressionQuality = 70; // Adjust as needed
+                int compressionQuality = 50; // Adjust as needed
 
                 var encoder = new JpegEncoder
                 {
