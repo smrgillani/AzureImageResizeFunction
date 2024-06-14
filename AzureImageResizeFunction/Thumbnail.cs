@@ -48,7 +48,8 @@ namespace AzureImageResizeFunction
                 using var image = Image.FromStream(stream);
 
                 int thumbnailWidth = Convert.ToInt32(Environment.GetEnvironmentVariable("THUMBNAIL_WIDTH"));
-                int thumbnailHeight = (int)((float)thumbnailWidth / image.Width * image.Height);
+                //int thumbnailHeight = (int)((float)thumbnailWidth / image.Width * image.Height);
+                int thumbnailHeight = Convert.ToInt32(Environment.GetEnvironmentVariable("THUMBNAIL_WIDTH"));
 
                 using var thumbnail = new Bitmap(thumbnailWidth, thumbnailHeight);
                 using var graphics = Graphics.FromImage(thumbnail);
